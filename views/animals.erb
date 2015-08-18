@@ -1,0 +1,13 @@
+<h1>Here are the animals</h1>
+
+<% if @animals.any? %>
+  <ul>
+    <% @animals.each do |animal| %>
+    <li><a href="/animals/<%= animal.id() %>"><%= animal.name() %></a></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>
+    There are no animals to adopt!
+  </p>
+<% end %>
